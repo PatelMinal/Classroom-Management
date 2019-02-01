@@ -18,7 +18,7 @@ import com.qa.util.JSONUtil;
 
 @Transactional(SUPPORTS)
 @Default
-public class TraineeDBRepository implements TraineesRepository {
+public class TraineeDBRepository implements TraineeRepository {
 	
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
@@ -53,8 +53,10 @@ public class TraineeDBRepository implements TraineesRepository {
 	}
 
 	public String updateTrainee(Long traineeid, String trainee) {
-		// TODO Auto-generated method stub
-		return null;
+		Trainees updateTrainee = findatrainee(traineeid);
+		deleteTrainee(traineeid);
+		createTrainee(trainee);
+		return "{\"message\": \"Trainee sucessfully updated\"}";
 	}
 
 }

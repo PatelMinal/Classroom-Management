@@ -53,8 +53,11 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	}
 
 	public String updateTrainer(Long classroomid, String trainer) {
-		// TODO Auto-generated method stub
-		return null;
+		Classroom updateTrainer = findatrainer(classroomid);
+		deleteTrainer(classroomid);
+		createTrainer(trainer);
+		return "{\"message\": \"Trainer sucessfully updated\"}";
+		
 	}
 	
 

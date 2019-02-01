@@ -10,15 +10,14 @@ public class Classroom {
 
 	private Long classroomid;
 	private String trainer;
-	
+
 	public Classroom() {
 	}
-	
-	public Classroom (String trainer) {
-		this.setTrainer(trainer);
-	
 
-}
+	public Classroom(String trainer) {
+		this.setTrainer(trainer);
+
+	}
 
 	public String getTrainer() {
 		return trainer;

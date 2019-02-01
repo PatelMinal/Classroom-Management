@@ -2,7 +2,6 @@ package com.qa.bussiness.service;
 
 import javax.inject.Inject;
 
-import com.qa.persistance.repository.ClassroomRepository;
 import com.qa.persistance.repository.TraineeRepository;
 
 public class TraineeServiceImpl implements TraineeService {

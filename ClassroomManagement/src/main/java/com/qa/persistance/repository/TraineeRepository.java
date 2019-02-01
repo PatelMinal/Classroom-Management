@@ -1,6 +1,6 @@
 package com.qa.persistance.repository;
 
-public interface TraineesRepository {
+public interface TraineeRepository {
 	
 	String getAlltrainees();
 	
