@@ -28,7 +28,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 
 	@Transactional(REQUIRED)
 	public String getAlltrainers() {
-		Query query = manager.createQuery("SELECT from Classroom a", Classroom.class);
+		Query query = manager.createQuery("SELECT a from Classroom a", Classroom.class);
 		Collection<Classroom> trainers = (Collection<Classroom>) query.getResultList();
 		return util.getJSONForObject(query);
 	}

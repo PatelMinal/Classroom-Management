@@ -24,14 +24,14 @@ public class ClassroomEndpoint {
 		return service.getAlltrainers();
 	}
 	
-	@Path("/createAccount")
+	@Path("/createTrainer")
 	@POST
 	@Produces({ "application/json" })
-	public String addTrainer(String trainer) {
+	public String createTrainer(String trainer) {
 		return service.createTrainer(trainer);
 	}
 	
-	@Path("/deleteAccount/{id}")
+	@Path("/deleteTrainer/{id}")
 	@DELETE
 	@Produces({ "application/json" })
 	public String deleteTrainer(@PathParam("id") Long classroomid) {

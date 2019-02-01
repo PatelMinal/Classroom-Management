@@ -24,14 +24,14 @@ public class TraineeEndpoint {
 		return service.getAlltrainees();
 	}
 	
-	@Path("/createAccount")
+	@Path("/createTrainee")
 	@POST
 	@Produces({ "application/json" })
 	public String addTrainee(String trainee) {
 		return service.createTrainee(trainee);
 	}
 	
-	@Path("/deleteAccount/{id}")
+	@Path("/deleteTrainee/{id}")
 	@DELETE
 	@Produces({ "application/json" })
 	public String deleteTrainee(@PathParam("id") Long traineeid) {
